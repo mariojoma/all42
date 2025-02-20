@@ -1,0 +1,63 @@
+vim
+Esc
+:wq -> Guardar y salir
+:q! -> Salir sin guardar
+
+Borrar directorio:	rm -r directorio
+
+ex00
+cat z
+
+ex01/ex02
+permission:
+chmod u=rxw,g=rxw,o=rxw testShell00
+
+1 byte character:	echo -n "x" > test5
+soft link:		ln test3 test5
+hard link:		ln -s test0 test6
+
+cambiar fecha directorio/archivo:
+touch -t 202406012342 testShell00 (202406012342 (2024 año, 06 mes, 01 dia, 23 hora, 42 min))
+cambiar fecha enlace duro:
+touch -t 202406012342 test6 -h
+
+ex03
+ssh-keygen
+cd ~/.ssh
+
+git clone git@vogsphere.42malaga.com:vogsphere/intra-uuid-32e4c794-3bea-4261-a631-d0531c976504-6310662-majorge- git_vid
+
+cp git_ignore.sh /home/majorge-/shell00/ex03/
+cp -r ex07 /home/majorge-/Personal/Git/git_vid/
+
+git add id_rsa.pub 
+git commit -m "added id_rsa.pub"
+git push
+
+ex04
+Crea en un archivo midLS que contenga el comando que hay que ejecutar para listar los archivos y los directorios del directorio actual, pero no los archivos ocultos, ni "."ni ".."(nada que empiece con un punto), separados por una coma y un espacio, ordenados por fecha de modificación y de tal modo que los directorios vayan seguidos por el carácter slash ("/").
+ls -mpt
+
+ex05
+Crea un script de shell que muestre en pantalla los id de los últimos 5 commits de tu repositorio git.
+git log -n 5 --pretty=format:"%H"  //Últimos 5 commits
+
+ex06
+git ls-files -o -i --exclude-standard
+git status --ignored
+
+ex07
+diff/pach
+patch a < sw.diff
+
+ex08
+Escriba en un archivo clean una línea de comandos que busque, a partir del directorio actual y en todos sus subdirectorios, los archivos cuyo nombre se termine por ~, o empiece y se termine por #.
+find . \( -name '*~' -o -name '#*#' \) -exec rm -v {} \;
+find . \( -name '*~' -o -name '#*#' \) -delete
+
+ex09
+Crea un archivo mágico que se llame ft_magic que tendrá que estar formateado
+correctamente para detectar los archivos de tipo 42 file y constituidos por la
+cadena "42" en el byte 42º. (man file)
+42 string 42 42 file
+

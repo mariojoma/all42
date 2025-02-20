@@ -1,0 +1,58 @@
+ex00
+cat z
+Aparecer Z y salto de línea.
+
+ex01
+tar -xvf testShell00.tar
+ls -l
+
+ex02
+tar -xvf exo2.tar
+ls -l
+
+ex03
+cat id_rsa_pub
+(clave pública)
+
+ex04
+cat midLS
+(ls -mpt)
+
+ex05
+sh git_commit.sh
+cat git_commit.sh
+
+#!/bin/bash
+git log -n 5 --pretty=format:"%H"
+
+ex06
+sh git_ignore.sh 
+cat git_ignore.sh 
+#!/bin/bash
+git ls-files -o -i --exclude-standard
+
+ex07
+cat b
+(Episodio 5)
+
+ex08
+touch test~
+sh clean
+removed './test~'
+
+cat clean
+find . \( -name '*~' -o -name '#*#' \) -ls -delete
+
+ex09
+42 string 42 42 file
+
+Evaluación Guillermo Astorga Calvo gastorga
+repositorio vacio.
+ex00. correcto
+ex01. cambiar permisos, tamaño correcto, cambiar fecha a anterior de 2025
+ex02. todo perfecto, solo cambiar año de 2025
+ex03. funciona perfectamente
+ex04. revisar comando para mostrar solo archivos de la carpeta
+ex05. no puedo testear por falta de repositorio pero el codigo parece correcto
+ex06. corregir comando, prueba solo con git ex07. recuperar episodio V man patch
+ex08. funciona perfectamente. mayormente todo funciona perefecto, solo falta pulir pequeños detalles :)
